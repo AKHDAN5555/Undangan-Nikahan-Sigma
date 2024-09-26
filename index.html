@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: Pink;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #e91e63;
+            animation: fadeIn 2s; /* Animasi untuk judul */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .details {
+            margin-top: 20px;
+            background-color: #f1f1f1; /* Warna latar belakang kotak */
+            border-radius: 10px; /* Sudut melengkung */
+            padding: 20px; /* Ruang di dalam kotak */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: small;
+            color: #777;
+        }
+
+        /* Animasi fade-in untuk semua teks */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mengaplikasikan animasi pada semua elemen teks */
+        h2, p {
+            animation: fadeIn 2s forwards; /* Animasi untuk subjudul dan paragraf */
+        }
+        
+        /* Menambahkan penundaan animasi untuk setiap elemen */
+        h2 {
+            animation-delay: 0.5s; /* Penundaan untuk h2 */
+        }
+        
+        p {
+            animation-delay: 1s; /* Penundaan untuk paragraf */
+        }
+
+        /* Gaya untuk tombol */
+        .next-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e91e63; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghilangkan border default */
+            border-radius: 5px; /* Sudut melengkung tombol */
+            text-decoration: none; /* Menghilangkan garis bawah pada link */
+            font-size: larger; /* Ukuran font yang lebih besar */
+            cursor: pointer; /* Menunjukkan kursor tangan saat hover */
+            transition: background-color 0.3s ease; /* Efek transisi saat hover */
+        }
+
+        .next-button:hover {
+            background-color: #d81b60; /* Warna saat hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Undangan Pernikahan</h1>
+    <p>Kami mengundang Anda untuk merayakan hari bahagia kami!</p>
+
+    <video controls autoplay muted loop>
+        <source src="Vidio.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video tag.
+    </video>
+
+    <div class="details">
+        <h2>Detail Acara</h2>
+        <p><strong>Tanggal:</strong> Sabtu, 15 November 2024</p>
+        <p><strong>Waktu:</strong> Pukul 14.00 WIB</p>
+    </div>
+
+    <!-- Tombol untuk berpindah ke halaman selanjutnya -->
+    <a href="COVER U.html" class="next-button">Informasi Lengkap</a>
+
+    <div class="footer">
+        <p>Terima kasih atas perhatian Anda!</p>
+    </div>
+</div>
+
+</body>
+</html>

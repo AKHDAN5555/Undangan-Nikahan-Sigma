@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: Pink;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+            animation: fadeIn 2s;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 10px;
+            color: #2c3e50;
+            animation: fadeIn 2s;
+        }
+        p {
+            line-height: 1.6;
+            text-align: center;
+        }
+        .details {
+            margin-top: 20px;
+            border-top: 2px solid #e74c3c;
+            padding-top: 10px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+        .countdown {
+            display: flex; 
+            justify-content: space-around; 
+            margin-top: 20px;
+        }
+        .countdown-box {
+            background-color: pink; 
+            color: white; 
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            width: 40px; 
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff69b4; 
+            text-align: center;
+            animation: heartbeat 2s infinite; 
+        }
+        .location-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #28a745; 
+            color: white; 
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Undangan Pernikahan</h1>
+    <h2>Dengan Hormat</h2>
+    <p>Kami mengundang Anda untuk merayakan hari bahagia kami.</p>
+
+    <img src="T.png" alt="Foto Pengantin" style="width:100%; border-radius:10px;">
+
+    <div class="details">
+        <p><strong>Nama Pengantin Pria:</strong> John Doe</p>
+        <p><strong>Nama Pengantin Wanita:</strong> Jane Smith</p>
+        <p><strong>Tanggal:</strong> Sabtu, 15 November 2024</p>
+        <p><strong>Waktu:</strong> Pukul 14.00 WIB</p>
+        <p><strong>Tempat:</strong> Gedung Serbaguna ABC<br>
+           Jl. Bulusan No.123, Jakarta</p>
+    </div>
+
+    <!-- Button to open Google Maps -->
+    <a href="https://maps.app.goo.gl/XkEbBUveK5E9kffh7" target="_blank" class="location-button">Lihat di Google Maps</a>
+
+    <!-- New button to navigate to the next page -->
+    <a href="penutupan.html" target="_blank" class="location-button">Lanjut </a>
+
+    <div class="countdown">
+        <div class="countdown-box" id="days">00<br><span>Hari</span></div>
+        <div class="countdown-box" id="hours">00<br><span>Jam</span></div>
+        <div class="countdown-box" id="minutes">00<br><span>Menit</span></div>
+        <div class="countdown-box" id="seconds">00<br><span>Detik</span></div>
+    </div>
+
+    <div class="heart"> 💗</div>
+    <div class="heart-text">Cinta Kami Selamanya</div>
+
+    <p>Kehadiran Anda sangat berarti bagi kami.</p>
+
+    <div class="footer">
+        <p>Dengan cinta,<br>John & Jane</p>
+    </div>
+</div>
+
+<script>
+// Hitung mundur hingga tanggal pernikahan
+const weddingDate = new Date("November 15, 2024 14:00:00").getTime();
+
+const countdownFunction = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days + "<br><span>Hari</span>";
+    document.getElementById("hours").innerHTML = hours + "<br><span>Jam</span>";
+    document.getElementById("minutes").innerHTML = minutes + "<br><span>Menit</span>";
+    document.getElementById("seconds").innerHTML = seconds + "<br><span>Detik</span>";
+
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("days").innerHTML = "Selamat Datang!";
+        document.getElementById("hours").innerHTML = "";
+        document.getElementById("minutes").innerHTML = "";
+        document.getElementById("seconds").innerHTML = "";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
